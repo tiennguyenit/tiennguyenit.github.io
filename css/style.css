@@ -8149,7 +8149,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #ffbd39; }
+  color: #2596be; }
   a:hover, a:focus {
     text-decoration: none;
     color: #ffbd39;
@@ -8162,7 +8162,7 @@ h1, h2, h3, h4, h5,
   font-weight: 400; }
 
 .text-primary {
-  color: #ffbd39 !important; }
+  color: #2596be !important; }
 
 .ftco-navbar-light {
   background: transparent !important;
@@ -9082,7 +9082,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #000000;
-  padding: 7em 0;
+  padding: 7em 0 1em 0;
   z-index: 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -9115,7 +9115,10 @@ textarea.form-control {
     font-size: 17px;
     font-weight: 400;
     color: #000000; }
-
+    
+.ftco-footer-social {
+    text-align: center;   
+}
 .ftco-footer-social li {
   list-style: none;
   margin: 0 10px 0 0;
@@ -9124,7 +9127,7 @@ textarea.form-control {
     height: 50px;
     width: 50px;
     display: block;
-    float: left;
+    /* float: left; */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     position: relative; }
@@ -9682,3 +9685,64 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/*Skills cards and tags */
+.skill-card-custom {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s all ease;
+}
+
+.skill-card-custom:hover {
+    border-color: #ffbd39;
+    background: rgba(255, 189, 57, 0.05);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skill-header i {
+    font-size: 22px;
+    color: #ffbd39;
+    margin-right: 15px;
+}
+
+.skill-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag-custom {
+    display: inline-block;
+    padding: 6px 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s all ease;
+}
+
+.skill-tag-custom:hover {
+    background: #ffbd39;
+    color: #000000;
+    border-color: #ffbd39;
+    transform: translateY(-2px);
+}

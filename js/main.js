@@ -275,3 +275,35 @@
 
 })(jQuery);
 
+
+function showAlert() {
+    // Create the overlay background
+    const overlay = document.createElement('div');
+    Object.assign(overlay.style, {
+        position: 'fixed', top: '0', left: '0', width: '100%', height: '100%',
+        backgroundColor: 'rgba(0,0,0,0.7)', zIndex: '10000',
+        display: 'flex', alignItems: 'center', justifyContent: 'center'
+    });
+
+    // Create the message box
+    const box = document.createElement('div');
+    Object.assign(box.style, {
+        backgroundColor: '#fff', padding: '30px', borderRadius: '10px',
+        maxWidth: '400px', textAlign: 'center', fontFamily: 'sans-serif'
+    });
+
+    // Add content
+    box.innerHTML = `
+        <h3 style="color: #000; margin-top: 0;">This project is coming soon!</h3>
+        <p style="color: #666; line-height: 1.5;">This website is currently in development, and will be available soon. Feel free to send me an email if you'd like to be notified when it's released.</p>
+        <button id="closeAlert" style="background: #ffbd39; border: none; padding: 10px 30px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 15px;">OK</button>
+    `;
+
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+
+    // Close function
+    document.getElementById('closeAlert').onclick = function() {
+        overlay.remove();
+    };
+}
